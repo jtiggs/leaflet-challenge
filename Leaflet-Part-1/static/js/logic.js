@@ -44,7 +44,7 @@
      let legend = L.control({position: 'bottomright'});
 
      legend.onAdd = function (map) {
-       let div = L.DomUtil.create('div', 'legend');
+       let div = L.DomUtil.create('div', 'info legend');
        let grades = [-10, 10, 30, 50, 70, 90];
        let colors = ['#00FF00', '#FFFF00', '#FF9900', '#FF3300', '#FF0000'];
 
@@ -57,13 +57,6 @@
      };
 
      legend.addTo(map);
-
-     // Custom legend styling
-     document.getElementById('legend').innerHTML = legend.getContainer().innerHTML;
-     document.getElementById('legend').style.background = 'white';
-     document.getElementById('legend').style.padding = '10px';
-     document.getElementById('legend').style.border = '1px solid #ccc';
-     document.getElementById('legend').style.borderRadius = '5px';
    });
 
  // Function to determine marker color based on depth
